@@ -1,0 +1,6 @@
+{
+  "video": false,
+  "integrationFolder": ".",
+  "testFiles": "./src/**/*.cypress.*",
+  "ignoreTestFiles": "**/node_modules/**/*.(spec|test|cypress).*"
+}

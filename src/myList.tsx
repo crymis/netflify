@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./myList.css";
 
 const CAT_EMOJIS = ["😸", "🐈", "😹", "😻", "🙀"];
-export const MyList = () => {
+export const MyList = ({ className }: { className?: string }) => {
   const [data, setData] = useState<any[]>([]);
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export const MyList = () => {
   }, []);
 
   return (
-    <div className="List">
+    <div className={className || "List"}>
       <h3>Here goes some Cats {CAT_EMOJIS[4]}</h3>
       {!data.length ? (
         "loading..."
