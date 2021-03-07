@@ -1,0 +1,11 @@
+.List {
+  font-size: 1.1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-weight: 400;
+}

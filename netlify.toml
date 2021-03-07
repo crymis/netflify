@@ -1,0 +1,27 @@
+# example netlify.toml
+[build]
+  command = "npm run build"
+  functions = "./functions"
+  publish = "./dist"
+
+  ## Uncomment to use this redirect for Single Page Applications like create-react-app.
+  ## Not needed for static site generators.
+  #[[redirects]]
+  #  from = "/*"
+  #  to = "/index.html"
+  #  status = 200
+
+  ## (optional) Settings for Netlify Dev
+  ## https://github.com/netlify/cli/blob/master/docs/netlxify-dev.md#project-detection
+[dev]
+  command = "npm run dev" # Command to start your dev server
+  publish = "dist" # Folder with the static content for _redirect file
+  framework="#custom"
+  # port = 3033 # Port that the dev server will be listening on
+  targetPort = 4033 # The port for your application server, framework or site generator
+
+  ## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/
+
+[[plugins]]
+  # runs Cypress tests against the deployed URL
+  package = "netlify-plugin-cypress"
