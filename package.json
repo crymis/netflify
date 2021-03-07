@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "test": "./node_modules/.bin/cypress run"
   },
   "dependencies": {
     "react": "^17.0.0",
