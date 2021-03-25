@@ -13,9 +13,22 @@ function App() {
         <p>Hello Vite + React!</p>
         <MyList className="MyList" />
         <p>
-          <button onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
+          <h2>New Feature! 🔥</h2>
+          <button onClick={() => setCount((count) => count + 1)}>ADD</button>
+          <button onClick={() => setCount((count) => count - 1)}>
+            SUBTRACT
           </button>
+          <div
+            style={{
+              padding: "1rem",
+              borderRadius: "0.25rem",
+              background: "#fafafc",
+              margin: "1rem",
+              color: "black",
+            }}
+          >
+            Count is: {count}
+          </div>
         </p>
         <p>
           Edit <code>App.tsx</code> and save to test HMR updates.
